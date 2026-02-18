@@ -1,21 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinky Button</title>
-    <meta name="author" content="Morpheus" />
+    <meta name="author" content="Morpheus">
     <meta
       name="description"
-      content="A kinky button that responds to clicks with *naughty* messages."
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+      content="A web button that responds to clicks with *naughty* messages."
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
   </head>
   <body>
     <button>Click me!</button>
     <p id="click-count">Clicks: 0</p>
   </body>
+  <footer>
+    <section id="footer-left">
+      <p id="footer-desc">Made with questionable intent.</p>
+    </section>
+    <section id="footer-right">
+      <p id="copyright">&copy; 2026 Morpheus</p>
+      <a href="https://github.com/TheGittyPerson" target="_blank"
+         id="github-link">
+        <img src="assets/images/github-logo.png" alt="GitHub Logo"
+             id="github-logo" width="16" height="16">
+      </a>
+    </section>
+  </footer>
   <script>
     const messages = [
       "Good boy...",
@@ -74,7 +87,7 @@
       "Ooohhh, I wasn't ready for this...",
     ];
 
-    var clicks = 0;
+    let clicks = 0;
     const button = document.querySelector("button");
     button.addEventListener("click", () => {
       clicks++;

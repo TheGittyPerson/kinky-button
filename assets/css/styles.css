@@ -14,6 +14,40 @@ button {
   cursor: pointer;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  padding: 30px 10px;
+  align-items: center;
+  width: 100vw;
+}
+
+footer section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+}
+
+footer section#footer-right {
+  right: 40px;
+}
+
+footer section#footer-left {
+  left: 40px;
+}
+
+footer p#footer-desc {
+  font-size: small;
+}
+
+footer p#copyright {
+  font-size: small;
+}
+
 #click-count {
   font-size: 10px;
   font-family: "Courier New", Courier, monospace;
