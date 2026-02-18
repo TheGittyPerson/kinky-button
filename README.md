@@ -1,2 +1,3 @@
-# useless-buttons
-Do you like buttons? This is just for you.
+# The Kinky Button
+
+Are you kinky? Do you like buttons? This site is just for you.
