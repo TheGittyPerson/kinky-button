@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+button {
+  height: 50px;
+  width: 200px;
+  font-size: large;
+  cursor: pointer;
+}
+
+#click-count {
+  font-size: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
