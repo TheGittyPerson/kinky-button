@@ -58,10 +58,41 @@ const messages = [
 
 let clicks = 0;
 const button = document.querySelector("button");
+
 button.addEventListener("click", () => {
     clicks++;
     document.getElementById("click-count").textContent = `Clicks: ${clicks}`;
+
     const randomMessage =
         messages[Math.floor(Math.random() * messages.length)];
-    alert(randomMessage);
+
+    createFloatingMessage(randomMessage);
 });
+
+function createFloatingMessage(text) {
+    const message = document.createElement("div");
+    message.classList.add("floating-message");
+    message.textContent = text;
+
+    document.body.appendChild(message);
+
+    // Position near center with randomness
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    const offsetX = (Math.random() - 0.5) * 500; // ±250px range
+    const offsetY = (Math.random() - 0.5) * 500;
+
+    message.style.left = `${centerX + offsetX}px`;
+    message.style.top = `${centerY + offsetY}px`;
+
+    // Trigger fade out after slight delay
+    setTimeout(() => {
+        message.classList.add("fade-out");
+    }, 50);
+
+    // Remove from DOM after animation ends
+    message.addEventListener("transitionend", () => {
+        message.remove();
+    });
+}

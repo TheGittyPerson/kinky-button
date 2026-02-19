@@ -48,6 +48,24 @@ footer p#copyright {
   font-size: small;
 }
 
+.floating-message {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 18px;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 2s ease;
+  z-index: 1000;
+}
+
+.floating-message.fade-out {
+  opacity: 0;
+}
+
 #click-count {
   font-size: 10px;
   font-family: "Courier New", Courier, monospace;
